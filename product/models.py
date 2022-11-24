@@ -7,5 +7,5 @@ class Product(models.Model):
     price = models.FloatField()
     quantity = models.IntegerField()
     description = models.TextField(max_length=160)
-    discount = models.IntegerField(blank=True)
+    discount = models.IntegerField(default=0, blank=True)
 
