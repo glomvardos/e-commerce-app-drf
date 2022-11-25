@@ -9,3 +9,6 @@ class Product(models.Model):
     description = models.TextField(max_length=160)
     discount = models.IntegerField(default=0, blank=True)
 
+
+class Category(models.Model):
+    name: models.CharField(max_length=60)
