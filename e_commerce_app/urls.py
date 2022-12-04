@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from user.views import ObtainJWTTokenPair, RefreshJWTToken
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/users/', include('user.urls')),
     path('api/products/', include('product.urls')),
+    path('api/login/', ObtainJWTTokenPair.as_view(), name='token_obtain_pair'),
+    path('api/login/refresh/', RefreshJWTToken.as_view(), name='token_refresh'),
 ]

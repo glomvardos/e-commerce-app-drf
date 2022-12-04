@@ -11,4 +11,4 @@ class Product(models.Model):
 
 
 class Category(models.Model):
-    name: models.CharField(max_length=60)
+    name: models.CharField(max_length=60, unique=True, )
