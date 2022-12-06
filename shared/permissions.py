@@ -13,4 +13,8 @@ class IsCustomer(permissions.BasePermission):
 
 class DenyAccess(permissions.BasePermission):
     def has_permission(self, request, view):
-        return request.user.user_role == 'ADMIN'
+        try:
+            return request.user.user_role == IsAdmin
+        except AttributeError:
+            return False
+
