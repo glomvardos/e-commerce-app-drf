@@ -5,7 +5,7 @@ from .serializers import ProductSerializer, CategorySerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-    # permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 

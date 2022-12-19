@@ -13,7 +13,7 @@ class RefreshJWTToken(TokenRefreshView):
     serializer_class = CustomTokenRefreshSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet, permissions.BasePermission):
+class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
