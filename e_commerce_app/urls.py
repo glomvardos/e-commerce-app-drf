@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/', include('user.urls')),
     path('api/products/', include('product.urls')),
+    path('api/categories/', include('category.urls')),
     path('api/login/', ObtainJWTTokenPair.as_view(), name='token_obtain_pair'),
     path('api/login/refresh/', RefreshJWTToken.as_view(), name='token_refresh'),
 ]

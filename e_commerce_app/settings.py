@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # local
     'product',
+    'category',
     'user',
 
     # packages

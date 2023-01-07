@@ -10,5 +10,3 @@ class Product(models.Model):
     discount = models.IntegerField(default=0, blank=True)
 
 
-class Category(models.Model):
-    name: models.CharField(max_length=60, unique=True, )
